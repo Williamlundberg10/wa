@@ -1,0 +1,40 @@
+{
+  "name": "box-wl",
+  "displayName": "BOX WL",
+  "description": "VS Code support for your custom website WL (.box files)",
+  "version": "0.0.3",
+  "publisher": "Williamli",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": ["Programming Languages"],
+  "activationEvents": ["onLanguage:boxdsl"],
+  "main": "./src/extension.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Williamlundberg10/wa.git"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "boxdsl",
+        "aliases": ["BOX DSL", "boxdsl"],
+        "extensions": [".box"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "boxdsl",
+        "scopeName": "source.boxdsl",
+        "path": "./syntaxes/dsl.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "boxdsl",
+        "path": "./snippets/dsl.code-snippets"
+      }
+    ]
+  }
+}
